@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewTech - Sign Up</title>
+    <link rel="icon" type="image/x-icon" href="resources/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+
+</head>
+<body>
+    
+    <div class="container-fluid">
+        <div class="row d-flex justify-content-center align-items-center" style="height: 90vh;">
+
+            <div class="col-10 col-lg-6 col-xxl-4">
+                <div class="row mt-3 mt-md-0">
+                    <div class="col-12 text-center mb-1">
+                        <span class="fs-3 poppins-regular">Create your <img class="mb-2" style="width: 170px" src="resources/NewTech..png" alt=""> account</span>
+                    </div>
+                    <div class="col-12 border border-0 rounded-3 shadow content-box" style="background-color: #FDD700;">
+
+                        <div class="row mt-2 p-md-2 p-0 sign-un-form poppins-light">
+                            <div class="col-12 col-md-6">
+                                <label for="fn" class="form-label">First Name :</label>
+                                <input class="form-control shadow-sm border rounded-0" type="text" id="fn">
+                            </div>
+                            <div class="col-12 col-md-6 mt-3 mt-md-0">
+                                <label for="fn" class="form-label">Last Name :</label>
+                                <input class="form-control shadow-sm border rounded-0" type="text" id="fn">
+                            </div>
+                            <div class="col-12 mt-3">
+                                <label for="email" class="form-label">Email:</label>
+                                <input type="email"  class="form-control shadow-sm border rounded-0" name="" id="email">
+                            </div>
+                            <div class="col-12 col-md-6 mt-3">
+                                <label for="pwd" class="form-label">Password :</label>
+                                <input class="form-control shadow-sm border rounded-0" type="text" id="pwd">
+                            </div>
+                            <div class="col-12 col-md-6 mt-3">
+                                <label for="re-pwd" class="form-label">Re-Enter Password :</label>
+                                <input class="form-control shadow-sm border rounded-0" type="text" id="re-pwd">
+                            </div>
+                            <div class="col-12 col-md-6 offset-0 offset-md-3 d-grid mb-3 mt-4">
+                                 <button class="logIn-btn" onclick="signUp();">Create Account</button>
+                                <div class="col-12 text-center sub-form-text mt-1">
+                                    <span>You already have a account? <a href="LogIn.html" class="poppins-medium">Log In</a></span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row position-fixed background-color bottom-0 fs-6 footer " style="background-color: #4C4C4C; width: 100%;">
+            <div class="footer-text col-12 text-center mb-md-3 mt-1 mt-md-3 mb-1 poppins-light w-100" style=" color: rgb(255, 255, 255);">
+                This web application is designed and created by <span class="poppins-medium">Sachala Indudunu.</span> <br>
+                <span>&copy;Copyright |&reg; All right Reserved </span>
+            </div>
+        </div>
+        
+    </div>
+    
+
+    <script src="dataHandle.js"></script>
+    <script src="animation.js"></script>
+</body>
+</html>

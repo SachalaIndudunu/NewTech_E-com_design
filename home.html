@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewTech - Home</title>
+    <link rel="icon" type="image/x-icon" href="resources/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+
+</head>
+
+<body style="overflow-x: hidden; overflow-y: scroll;">
+
+    <div class="conteiner-fluid "
+        style="z-index: 1; overflow-x: hidden; width: 100vw;   height: 100vh; scroll-snap-align: end;">
+
+        <!-- sub links start -->
+        <div class="row position-absolute watcher" style="width: 100%;">
+            <div class="col-10 offset-1 d-flex top-0 position-absolute justify-content-center justify-content-lg-end poppins-medium"
+                style="color: gray; font-size: 10px; z-index: 5;">
+                <a style="color: rgb(95, 95, 95);" href="LogIn.html"><span>User Log In</span></a> &nbsp;| &nbsp;
+                <a style="color: rgb(95, 95, 95);" href="signUp.html"><span>Create New Account</span></a>&nbsp;
+                | &nbsp;
+                <a target="_blank" style="color: rgb(95, 95, 95);" href="admin_logIn.html"><span>Admin
+                        Login</span></a>
+            </div>
+        </div>
+        <!-- sub links end -->
+
+        <div class="row content-view-1 vh-100" style="display: block;">
+
+            <!-- -----------------------nav bar start ------------------------------ -->
+            <div class="col-12" style="height: 80px; z-index: 3;">
+
+                <!-- burger menu start -->
+                <div class="row d-lg-none d-block">
+                    <div class="col-12 col-sm-7 col-md-6 burger-nav d-flex align-items-center" id="burger-menu-wrap"
+                        style="background-color: #202020;">
+                        <div class="row ">
+
+                            <div class="col-12 burger-nav-link">
+                                <img class="profile-pic" src="resources/admin_dashboard/MaleUserYellow.png" alt="">
+                                <span class="link-text poppins-light"
+                                    style="margin-left: 10px; font-size: 30px;">Sachala</span>
+                            </div>
+                            <hr style="width: 2px; color: #FDD700; width: 100%;">
+                            <div class="col-12 burger-nav-link text-center">
+                                <a href="#" class="link-text poppins-medium">Categories</a>
+                            </div>
+                            <hr style="width: 2px; color: #FDD700; width: 100%">
+                            <div class="col-12 burger-nav-link text-center">
+                                <a href="#" class="link-text poppins-medium">About</a>
+                            </div>
+                            <hr style="width: 2px; color: #FDD700; width: 100%">
+                            <div class="col-12 burger-nav-link text-center">
+                                <a href="#" class="link-text poppins-medium">Contact</a>
+                            </div>
+                            <hr style="width: 2px; color: #FDD700; width: 100%">
+                            <div class="col-12 burger-nav-link text-center">
+                                <a href="#" class="link-text poppins-medium">Shop Location</a>
+                            </div>
+                            <hr style="width: 2px; color: #FDD700; width: 100%">
+
+                        </div>
+                    </div>
+                </div>
+                <!-- burger menu end -->
+
+                <div class=" nav-bar d-flex align-items-center" style="height: 80px; z-index: 4;" id="nav-bar-color">
+
+                    <div class="col-10 offset-1 d-flex align-items-center justify-content-between"
+                        style="margin-top: 11px;">
+
+                        <div class=" d-flex align-items-center" style="width: fit-content;">
+                            <div style="cursor: pointer; margin-right: 10px;"
+                                class="burger nav-icon-right d-lg-none d-block" onclick="showHomeMenu();">
+                                <div class="burger-1" id="burger-1"></div>
+                                <div class="burger-2" id="burger-2"></div>
+                                <div class="burger-3" id="burger-3"></div>
+                            </div>
+                            <img src="resources/logo.png" class="d-lg-none d-block" style="height: 40px;" alt="">
+                            <img src="resources/NewTech.white.png" class="d-lg-block d-none" style="height: 30px;"
+                                alt="">
+                        </div>
+
+                        <div class="d-flex align-items-center" style="font-size: small;">
+                            <span class="nav-elements poppins-medium nav-element  d-lg-block d-none">Categories</span>
+                            <span class="nav-elements poppins-medium nav-element  d-lg-block d-none">About</span>
+                            <span class="nav-elements poppins-medium nav-element  d-lg-block d-none">Contact &
+                                Location</span>
+                            <div
+                                class="div nav-elements poppins-medium d-flex align-items-center nav-element d-lg-block d-none">
+                                <img src="resources/admin_dashboard/MaleUserYellow.png" class="profile-pic" alt="">
+                            </div>
+                            <img class="nav-element" src="resources/search.png" style="height: 22px;"
+                                alt="">
+                            <a title="Wishlist" href="watchlist.html"><img class="nav-element" src="resources/Favorite.png"
+                                    style="height: 22px;" alt=""></a>
+                            <a title="Cart" href="cart.html"><img class="nav-element" src="resources/cart.png"
+                                    style="height: 22px;" alt=""></a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- -----------------------nav bar end ------------------------------ -->
+
+            <div class="col-10 offset-1 position-relative top-0 d-flex align-items-center title-div">
+                <span class="title poppins-medium" style=" pointer-events: none;">Dive in to the ocean full of <br>
+                    Cool Electronics.</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container product-container " style=" scroll-snap-align: start;" id="product-container">
+
+        <!-- Trending product start -->
+        <div class="row">
+            <div class="col-12">
+                <div class="row rounded-3" id="trendingSec">
+                    <span class="col-12 yellow poppins-medium mb-2 mt-2">Trending Products</span>
+                    <div class="col-12">
+                        <div class="row mb-3">
+
+                            <!-- product card start -->
+                            <div class="col-xl-2 col-lg-4 col-sm-6 col-12 mb-md-3 mb-2 " style="max-height: 260px;">
+                                <div id="1" class="card rounded-1 product-card shadow-sm border-0"
+                                    onclick="singleProductView(id);" style=" overflow: hidden; height: 100%;">
+                                    <div class="card-img-top d-flex justify-content-center"
+                                        style="width: 100%; height: 150px; ">
+                                        <div class="p-img"
+                                            style="width: 100%; height: 100%; background: url(Product-imgs/microbit.jpg) no-repeat center; background-size: contain;">
+                                        </div>
+                                    </div>
+                                    <div class="card-body d-flex flex-column justify-content-between"
+                                        style="padding-bottom: 2px; padding-top: 10px; height: 110px;">
+                                        <h5 class="card-title p-title "
+                                            style="padding-bottom: 0px; margin-bottom: 4px; font-size: 12px;">micro:bit
+                                            Development Board V1</h5>
+                                        <p class="card-text" style="font-size: small; margin-bottom: 4px;"> Rs. 6,250
+                                            <span class="discount">Rs.6,700</span>
+                                        </p>
+                                        <div class="buy-heart">
+                                            <div class="row" style="margin-bottom: 5px;">
+                                                <button class="col-10 buy-btn">Add to cart</button>
+                                                <button class="col-2 heart-btn"><img src="resources/heart.svg"
+                                                        alt=""></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- product card start -->
+
+                            <!-- product card start -->
+                            <div class="col-xl-2 col-lg-4 col-sm-6 col-12 mb-md-3 mb-2" style="max-height: 260px;">
+                                <div class="card rounded-1 product-card shadow-sm border-0 "
+                                    style=" overflow: hidden; height: 100%;">
+                                    <div class="card-img-top d-flex justify-content-center"
+                                        style="width: 100%; height: 150px; ">
+                                        <div class="p-img"
+                                            style="width: 100%; height: 100%; background: url(Product-imgs/4wheel-kit.png) no-repeat center; background-size: contain;">
+                                        </div>
+                                    </div>
+                                    <div class="card-body d-flex flex-column justify-content-between"
+                                        style="padding-bottom: 2px; padding-top: 10px; height: 110px;">
+                                        <h5 class="card-title p-title"
+                                            style="padding-bottom: 0px; margin-bottom: 4px; font-size: 12px;"> 4 Wheel
+                                            Smart Car Chassis kit </h5>
+                                        <p class="card-text" style="font-size: small; margin-bottom: 4px;"> Rs.2,050
+                                            <!-- <span class="discount">Rs:27,000</span></p> -->
+                                        <div class="buy-heart">
+                                            <div class="row" style="margin-bottom: 5px;">
+                                                <button class="col-10 buy-btn">Add to cart</button>
+                                                <button class="col-2 heart-btn"><img src="resources/heart.svg"
+                                                        alt=""></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- product card start -->
+
+                            <!-- product card start -->
+                            <div class="col-xl-2 col-lg-4 col-sm-6 col-12 mb-md-3 mb-2" style="max-height: 260px;">
+                                <div id="2" class="card rounded-1 product-card shadow-sm border-0 "
+                                    onclick="singleProductView(id);" style=" overflow: hidden; height: 100%;">
+                                    <div class="card-img-top d-flex justify-content-center"
+                                        style="width: 100%; height: 150px; ">
+                                        <div class="p-img"
+                                            style="width: 100%; height: 100%; background: url(Product-imgs/images.jpeg) no-repeat center; background-size: contain;">
+                                        </div>
+                                    </div>
+                                    <div class="card-body d-flex flex-column justify-content-between"
+                                        style="padding-bottom: 2px; padding-top: 10px; height: 110px;">
+                                        <h5 class="card-title p-title"
+                                            style="padding-bottom: 0px; margin-bottom: 4px; font-size: 12px;">Raspberry
+                                            Pi 4 Model B 4GB Original UK </h5>
+                                        <p class="card-text" style="font-size: small; margin-bottom: 4px;"> Rs.27,500
+                                            <span class="discount">Rs.28,000</span>
+                                        </p>
+                                        <div class="buy-heart">
+                                            <div class="row" style="margin-bottom: 5px;">
+                                                <button class="col-10 buy-btn">Add to cart</button>
+                                                <button class="col-2 heart-btn"><img src="resources/heart.svg"
+                                                        alt=""></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- product card start -->
+
+                            <!-- product card start -->
+                            <div class="col-xl-2 col-lg-4 col-sm-6 col-12 mb-md-3 mb-2" style="max-height: 260px;">
+                                <div class="card rounded-1 product-card shadow-sm border-0 "
+                                    style=" overflow: hidden; height: 100%;">
+                                    <div class="card-img-top d-flex justify-content-center"
+                                        style="width: 100%; height: 150px; ">
+                                        <div class="p-img"
+                                            style="width: 100%; height: 100%; background: url(Product-imgs/NanoV3.jpg) no-repeat center; background-size: contain;">
+                                        </div>
+                                    </div>
+                                    <div class="card-body d-flex flex-column justify-content-between"
+                                        style="padding-bottom: 2px; padding-top: 10px; height: 110px;">
+                                        <h5 class="card-title p-title"
+                                            style="padding-bottom: 0px; margin-bottom: 4px; font-size: 12px;">Arduino
+                                            Nano V3.0 Original</h5>
+                                        <p class="card-text" style="font-size: small; margin-bottom: 4px;"> Rs.1,950.00
+                                            <span class="discount">Rs:2,100</span>
+                                        </p>
+                                        <div class="buy-heart">
+                                            <div class="row" style="margin-bottom: 5px;">
+                                                <button class="col-10 buy-btn">Add to cart</button>
+                                                <button class="col-2 heart-btn"><img src="resources/heart.svg"
+                                                        alt=""></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- product card start -->
+
+                            <!-- product card start -->
+                            <div class="col-xl-2 col-lg-4 col-sm-6 col-12 mb-md-3 mb-2" style="max-height: 260px;">
+                                <div class="card rounded-1 product-card shadow-sm border-0 "
+                                    style=" overflow: hidden; height: 100%;">
+                                    <div class="card-img-top d-flex justify-content-center"
+                                        style="width: 100%; height: 150px; ">
+                                        <div class="p-img"
+                                            style="width: 100%; height: 100%; background: url(Product-imgs/ESP32.jpg) no-repeat center; background-size: contain;">
+                                        </div>
+                                    </div>
+                                    <div class="card-body d-flex flex-column justify-content-between"
+                                        style="padding-bottom: 2px; padding-top: 10px; height: 110px;">
+                                        <h5 class="card-title p-title "
+                                            style="padding-bottom: 0px; margin-bottom: 4px; font-size: 12px;"> NodeMCU
+                                            ESP32S WiFi Bluetooth Dual Mode Board</h5>
+                                        <p class="card-text" style="font-size: small; margin-bottom: 4px;"> Rs.1,430
+                                            <!-- <span class="discount">Rs:27,000</span></p> -->
+                                        <div class="buy-heart">
+                                            <div class="row" style="margin-bottom: 5px;">
+                                                <button class="col-10 buy-btn">Add to cart</button>
+                                                <button class="col-2 heart-btn"><img src="resources/heart.svg"
+                                                        alt=""></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- product card start -->
+
+                            <!-- product card start -->
+                            <div class="col-xl-2 col-lg-4 col-sm-6 col-12 mb-md-3 mb-2" style="max-height: 260px;">
+                                <div class="card rounded-1 product-card shadow-sm border-0 "
+                                    style=" overflow: hidden; height: 100%;">
+                                    <div class="card-img-top d-flex justify-content-center"
+                                        style="width: 100%; height: 150px; ">
+                                        <div class="p-img"
+                                            style="width: 100%; height: 100%; background: url(Product-imgs/TTGO.png) no-repeat center; background-size: contain;">
+                                        </div>
+                                    </div>
+                                    <div class="card-body d-flex flex-column justify-content-between"
+                                        style="padding-bottom: 2px; padding-top: 10px; height: 110px;">
+                                        <h5 class="card-title p-title"
+                                            style="padding-bottom: 0px; margin-bottom: 4px; font-size: 12px;"> TTGO
+                                            T-Call ESP32 SIM800L Module v1.4 </h5>
+                                        <p class="card-text" style="font-size: small; margin-bottom: 4px;"> Rs.7,900
+                                            <!-- <span class="discount">Rs:27,000</span></p> -->
+                                        <div class="buy-heart">
+                                            <div class="row" style="margin-bottom: 5px;">
+                                                <button class="col-10 buy-btn">Add to cart</button>
+                                                <button class="col-2 heart-btn"><img src="resources/heart.svg"
+                                                        alt=""></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- product card start -->
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <!-- Trending product end -->
+
+        <!-- Hot deals start -->
+        <div class="row shadow rounded-3" style="margin-top:150px; background-color: #FDD700; padding: 5px;">
+            <div class="col-12">
+                <div class="row">
+                    <span class="col-12 poppins-medium mb-2">Hot Deals</span>
+                    <div class="col-12">
+                        <div class="row mb-3">
+
+                            <!-- product card start -->
+                            <div class="col-xl-2 col-lg-4 col-sm-6 col-12 mb-md-3 mb-2" style="max-height: 260px;">
+                                <div id="2" class="card rounded-1 product-card shadow-sm border-0 "
+                                    onclick="singleProductView(id);" style=" overflow: hidden; height: 100%;">
+                                    <div class="card-img-top d-flex justify-content-center"
+                                        style="width: 100%; height: 150px; ">
+                                        <div class="p-img"
+                                            style="width: 100%; height: 100%; background: url(Product-imgs/images.jpeg) no-repeat center; background-size: contain;">
+                                        </div>
+                                    </div>
+                                    <div class="card-body d-flex flex-column justify-content-between"
+                                        style="padding-bottom: 2px; padding-top: 10px; height: 110px;">
+                                        <h5 class="card-title p-title"
+                                            style="padding-bottom: 0px; margin-bottom: 4px; font-size: 12px;">Raspberry
+                                            Pi 4 Model B 4GB Original UK </h5>
+                                        <p class="card-text" style="font-size: small; margin-bottom: 4px;"> Rs.27,500
+                                            <span class="discount">Rs.28,000</span>
+                                        </p>
+                                        <div class="buy-heart">
+                                            <div class="row" style="margin-bottom: 5px;">
+                                                <button class="col-10 buy-btn">Add to cart</button>
+                                                <button class="col-2 heart-btn"><img src="resources/heart.svg"
+                                                        alt=""></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- product card start -->
+
+                            <!-- product card start -->
+                            <div class="col-xl-2 col-lg-4 col-sm-6 col-12 mb-md-3 mb-2" style="max-height: 260px;">
+                                <div class="card rounded-1 product-card shadow-sm border-0 "
+                                    style=" overflow: hidden; height: 100%;">
+                                    <div class="card-img-top d-flex justify-content-center"
+                                        style="width: 100%; height: 150px; ">
+                                        <div class="p-img"
+                                            style="width: 100%; height: 100%; background: url(Product-imgs/NanoV3.jpg) no-repeat center; background-size: contain;">
+                                        </div>
+                                    </div>
+                                    <div class="card-body d-flex flex-column justify-content-between"
+                                        style="padding-bottom: 2px; padding-top: 10px; height: 110px;">
+                                        <h5 class="card-title p-title"
+                                            style="padding-bottom: 0px; margin-bottom: 4px; font-size: 12px;">Arduino
+                                            Nano V3.0 Original</h5>
+                                        <p class="card-text" style="font-size: small; margin-bottom: 4px;"> Rs.1,950.00
+                                            <span class="discount">Rs:2,100</span>
+                                        </p>
+                                        <div class="buy-heart">
+                                            <div class="row" style="margin-bottom: 5px;">
+                                                <button class="col-10 buy-btn">Add to cart</button>
+                                                <button class="col-2 heart-btn"><img src="resources/heart.svg"
+                                                        alt=""></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- product card start -->
+
+                            <!-- product card start -->
+                            <div class="col-xl-2 col-lg-4 col-sm-6 col-12 mb-md-3 mb-2" style="max-height: 260px;">
+                                <div class="card rounded-1 product-card shadow-sm border-0 "
+                                    style=" overflow: hidden; height: 100%;">
+                                    <div class="card-img-top d-flex justify-content-center"
+                                        style="width: 100%; height: 150px; ">
+                                        <div class="p-img"
+                                            style="width: 100%; height: 100%; background: url(Product-imgs/microbit.jpg) no-repeat center; background-size: contain;">
+                                        </div>
+                                    </div>
+                                    <div class="card-body d-flex flex-column justify-content-between"
+                                        style="padding-bottom: 2px; padding-top: 10px; height: 110px;">
+                                        <h5 class="card-title p-title"
+                                            style="padding-bottom: 0px; margin-bottom: 4px; font-size: 12px;"> micro:bit
+                                            Development Board V1</h5>
+                                        <p class="card-text" style="font-size: small; margin-bottom: 4px;"> Rs.2,050
+                                            <span class="discount">Rs.6,700</span>
+                                        </p>
+                                        <div class="buy-heart">
+                                            <div class="row" style="margin-bottom: 5px;">
+                                                <button class="col-10 buy-btn">Add to cart</button>
+                                                <button class="col-2 heart-btn"><img src="resources/heart.svg"
+                                                        alt=""></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- product card start -->
+
+                            <!-- product card start -->
+                            <div class="col-xl-2 col-lg-4 col-sm-6 col-12 mb-md-3 mb-2" style="max-height: 260px;">
+                                <div class="card rounded-1 product-card shadow-sm border-0 "
+                                    style=" overflow: hidden; height: 100%;">
+                                    <div class="card-img-top d-flex justify-content-center"
+                                        style="width: 100%; height: 150px; ">
+                                        <div class="p-img"
+                                            style="width: 100%; height: 100%; background: url(Product-imgs/sinWaveinverter.jpg) no-repeat center; background-size: contain;">
+                                        </div>
+                                    </div>
+                                    <div class="card-body d-flex flex-column justify-content-between"
+                                        style="padding-bottom: 2px; padding-top: 10px; height: 110px;">
+                                        <h5 class="card-title p-title"
+                                            style="padding-bottom: 0px; margin-bottom: 4px; font-size: 12px;"> EGS002
+                                            EG8010 Pure Sine Wave Inverter Driver Board </h5>
+                                        <p class="card-text" style="font-size: small; margin-bottom: 4px;"> Rs.1,650
+                                            <span class="discount">Rs.1,700</span>
+                                        </p>
+                                        <div class="buy-heart">
+                                            <div class="row" style="margin-bottom: 5px;">
+                                                <button class="col-10 buy-btn">Add to cart</button>
+                                                <button class="col-2 heart-btn"><img src="resources/heart.svg"
+                                                        alt=""></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- product card start -->
+
+                            <!-- product card start -->
+                            <div class="col-xl-2 col-lg-4 col-sm-6 col-12 mb-md-3 mb-2" style="max-height: 260px;">
+                                <div class="card rounded-1 product-card shadow-sm border-0 "
+                                    style=" overflow: hidden; height: 100%;">
+                                    <div class="card-img-top d-flex justify-content-center"
+                                        style="width: 100%; height: 150px; ">
+                                        <div class="p-img"
+                                            style="width: 100%; height: 100%; background: url(Product-imgs/solaInverter.jpg) no-repeat center; background-size: contain;">
+                                        </div>
+                                    </div>
+                                    <div class="card-body d-flex flex-column justify-content-between"
+                                        style="padding-bottom: 2px; padding-top: 10px; height: 110px;">
+                                        <h5 class="card-title p-title"
+                                            style="padding-bottom: 0px; margin-bottom: 4px; font-size: 12px;"> PWM Solar
+                                            Charge Controller 40A Auto 12V-24V</h5>
+                                        <p class="card-text" style="font-size: small; margin-bottom: 4px;"> Rs.4,850
+                                            <span class="discount">Rs.4,920</span>
+                                        </p>
+                                        <div class="buy-heart">
+                                            <div class="row" style="margin-bottom: 5px;">
+                                                <button class="col-10 buy-btn">Add to cart</button>
+                                                <button class="col-2 heart-btn"><img src="resources/heart.svg"
+                                                        alt=""></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- product card start -->
+
+                            <!-- product card start -->
+                            <div class="col-xl-2 col-lg-4 col-sm-6 col-12 mb-md-3 mb-2" style="max-height: 260px;">
+                                <div class="card rounded-1 product-card shadow-sm border-0 "
+                                    style=" overflow: hidden; height: 100%;">
+                                    <div class="card-img-top d-flex justify-content-center"
+                                        style="width: 100%; height: 150px; ">
+                                        <div class="p-img"
+                                            style="width: 100%; height: 100%; background: url(Product-imgs/solaInverter2.jpg) no-repeat center; background-size: contain;">
+                                        </div>
+                                    </div>
+                                    <div class="card-body d-flex flex-column justify-content-between"
+                                        style="padding-bottom: 2px; padding-top: 10px; height: 110px;">
+                                        <h5 class="card-title p-title"
+                                            style="padding-bottom: 0px; margin-bottom: 4px; font-size: 12px;"> PWM Solar
+                                            Charge Controller 10A Auto 12V-24V </h5>
+                                        <p class="card-text" style="font-size: small; margin-bottom: 4px;"> Rs.1,820
+                                            <span class="discount">Rs.1,920</span>
+                                        </p>
+                                        <div class="buy-heart">
+                                            <div class="row" style="margin-bottom: 5px;">
+                                                <button class="col-10 buy-btn">Add to cart</button>
+                                                <button class="col-2 heart-btn"><img src="resources/heart.svg"
+                                                        alt=""></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- product card start -->
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <!-- Hot deals end -->
+
+        <!-- Hot deals start -->
+        <div class="row shadow rounded-3" style="margin-top:50px; background-color: white; padding: 5px;">
+            <div class="col-12">
+                <div class="row">
+                    <span class="col-12 poppins-medium mb-2">Recently Added</span>
+                    <div class="col-12">
+                        <div class="row mb-3">
+
+                            <!-- product card start -->
+                            <div class="col-xl-2 col-lg-4 col-sm-6 col-12 mb-md-3 mb-2" style="max-height: 260px;">
+                                <div id="3" class="card rounded-1 border border-1 product-card shadow-sm "
+                                    onclick="singleProductView(id);" style=" overflow: hidden; height: 100%;">
+                                    <div class="card-img-top d-flex justify-content-center"
+                                        style="width: 100%; height: 150px; ">
+                                        <div class="p-img"
+                                            style="width: 100%; height: 100%; background: url(Product-imgs/arm.jpg) no-repeat center; background-size: contain;">
+                                        </div>
+                                    </div>
+                                    <div class="card-body d-flex flex-column justify-content-between"
+                                        style="padding-bottom: 2px; padding-top: 10px; height: 110px;">
+                                        <h5 class="card-title p-title"
+                                            style="padding-bottom: 0px; margin-bottom: 4px; font-size: 12px;"> Optimus 4
+                                            DOF Robot Arm</h5>
+                                        <p class="card-text" style="font-size: small; margin-bottom: 4px;"> Rs.5,400
+                                            <!-- <span class="discount">Rs:27,000</span></p> -->
+                                        <div class="buy-heart">
+                                            <div class="row" style="margin-bottom: 5px;">
+                                                <button class="col-10 buy-btn">Add to cart</button>
+                                                <button class="col-2 heart-btn"><img src="resources/heart.svg"
+                                                        alt=""></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- product card start -->
+
+                            <!-- product card start -->
+                            <div class="col-xl-2 col-lg-4 col-sm-6 col-12 mb-md-3 mb-2" style="max-height: 260px; ">
+                                <div class="card rounded-1 border border-1 product-card shadow-sm"
+                                    style=" overflow: hidden; height: 100%;">
+                                    <div class="card-img-top d-flex justify-content-center"
+                                        style="width: 100%; height: 150px; ">
+                                        <div class="p-img"
+                                            style="width: 100%; height: 100%; background: url(Product-imgs/multimeter.jpg) no-repeat center; background-size: contain;">
+                                        </div>
+                                    </div>
+                                    <div class="card-body d-flex flex-column justify-content-between"
+                                        style="padding-bottom: 2px; padding-top: 10px; height: 110px;">
+                                        <h5 class="card-title p-title"
+                                            style="padding-bottom: 0px; margin-bottom: 4px; font-size: 12px;">Sanwa
+                                            CD800a Digital Multimeter (Original) </h5>
+                                        <p class="card-text" style="font-size: small; margin-bottom: 4px;"> Rs.14,250
+                                            <!-- <span class="discount">Rs:27,000</span></p> -->
+                                        <div class="buy-heart">
+                                            <div class="row" style="margin-bottom: 5px;">
+                                                <button class="col-10 buy-btn">Add to cart</button>
+                                                <button class="col-2 heart-btn"><img src="resources/heart.svg"
+                                                        alt=""></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- product card start -->
+
+                            <!-- product card start -->
+                            <div class="col-xl-2 col-lg-4 col-sm-6 col-12 mb-md-3 mb-2" style="max-height: 260px;">
+                                <div class="card rounded-1 border border-1 product-card shadow-sm "
+                                    style=" overflow: hidden; height: 100%;">
+                                    <div class="card-img-top d-flex justify-content-center"
+                                        style="width: 100%; height: 150px; ">
+                                        <div class="p-img"
+                                            style="width: 100%; height: 100%; background: url(Product-imgs/multimeter2.jpg) no-repeat center; background-size: contain;">
+                                        </div>
+                                    </div>
+                                    <div class="card-body d-flex flex-column justify-content-between"
+                                        style="padding-bottom: 2px; padding-top: 10px; height: 110px;">
+                                        <h5 class="card-title p-title"
+                                            style="padding-bottom: 0px; margin-bottom: 4px; font-size: 12px;"> Sanwa
+                                            YX360TRF Analog Multimeter (Original)</h5>
+                                        <p class="card-text" style="font-size: small; margin-bottom: 4px;"> Rs.15,350.00
+                                            <!-- <span class="discount">Rs:27,000</span></p> -->
+                                        <div class="buy-heart">
+                                            <div class="row" style="margin-bottom: 5px;">
+                                                <button class="col-10 buy-btn">Add to cart</button>
+                                                <button class="col-2 heart-btn"><img src="resources/heart.svg"
+                                                        alt=""></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- product card start -->
+
+                            <!-- product card start -->
+                            <div class="col-xl-2 col-lg-4 col-sm-6 col-12 mb-md-3 mb-2" style="max-height: 260px;">
+                                <div class="card rounded-1 border border-1 product-card shadow-sm "
+                                    style=" overflow: hidden; height: 100%;">
+                                    <div class="card-img-top d-flex justify-content-center"
+                                        style="width: 100%; height: 150px; ">
+                                        <div class="p-img"
+                                            style="width: 100%; height: 100%; background: url(Product-imgs/multimeter3.jpg) no-repeat center; background-size: contain;">
+                                        </div>
+                                    </div>
+                                    <div class="card-body d-flex flex-column justify-content-between"
+                                        style="padding-bottom: 2px; padding-top: 10px; height: 110px;">
+                                        <h5 class="card-title p-title"
+                                            style="padding-bottom: 0px; margin-bottom: 4px; font-size: 12px;"> Sunwa
+                                            CD800a Digital Multimeter (Good Quality Clone) </h5>
+                                        <p class="card-text" style="font-size: small; margin-bottom: 4px;"> Rs.6,800
+                                            <!-- <span class="discount">Rs:27,000</span></p> -->
+                                        <div class="buy-heart">
+                                            <div class="row" style="margin-bottom: 5px;">
+                                                <button class="col-10 buy-btn">Add to cart</button>
+                                                <button class="col-2 heart-btn"><img src="resources/heart.svg"
+                                                        alt=""></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- product card start -->
+
+                            <!-- product card start -->
+                            <div class="col-xl-2 col-lg-4 col-sm-6 col-12 mb-md-3 mb-2" style="max-height: 260px;">
+                                <div class="card rounded-1 border border-1 product-card shadow-sm "
+                                    style=" overflow: hidden; height: 100%;">
+                                    <div class="card-img-top d-flex justify-content-center"
+                                        style="width: 100%; height: 150px; ">
+                                        <div class="p-img"
+                                            style="width: 100%; height: 100%; background: url(Product-imgs/microbit.jpg) no-repeat center; background-size: contain;">
+                                        </div>
+                                    </div>
+                                    <div class="card-body d-flex flex-column justify-content-between"
+                                        style="padding-bottom: 2px; padding-top: 10px; height: 110px;">
+                                        <h5 class="card-title p-title"
+                                            style="padding-bottom: 0px; margin-bottom: 4px; font-size: 12px;"> 4 Wheel
+                                            Smart Car Chassis kit </h5>
+                                        <p class="card-text" style="font-size: small; margin-bottom: 4px;"> Rs.2,050
+                                            <!-- <span class="discount">Rs:27,000</span></p> -->
+                                        <div class="buy-heart">
+                                            <div class="row" style="margin-bottom: 5px;">
+                                                <button class="col-10 buy-btn">Add to cart</button>
+                                                <button class="col-2 heart-btn"><img src="resources/heart.svg"
+                                                        alt=""></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- product card start -->
+
+                            <!-- product card start -->
+                            <div class="col-xl-2 col-lg-4 col-sm-6 col-12" style="max-height: 260px;">
+                                <div class="card rounded-1 border border-1 product-card shadow-sm"
+                                    style=" overflow: hidden; height: 100%;">
+                                    <div class="card-img-top d-flex justify-content-center"
+                                        style="width: 100%; height: 150px; ">
+                                        <div class="p-img"
+                                            style="width: 100%; height: 100%; background: url(Product-imgs/ESP32.jpg) no-repeat center; background-size: contain;">
+                                        </div>
+                                    </div>
+                                    <div class="card-body d-flex flex-column justify-content-between"
+                                        style="padding-bottom: 2px; padding-top: 10px; height: 110px;">
+                                        <h5 class="card-title p-title"
+                                            style="padding-bottom: 0px; margin-bottom: 4px; font-size: 12px;"> NodeMCU
+                                            ESP32S WiFi Bluetooth Dual Mode Board</h5>
+                                        <p class="card-text" style="font-size: small; margin-bottom: 4px;"> Rs.1,430
+                                            <!-- <span class="discount">Rs:27,000</span></p> -->
+                                        <div class="buy-heart">
+                                            <div class="row" style="margin-bottom: 5px;">
+                                                <button class="col-10 buy-btn">Add to cart</button>
+                                                <button class="col-2 heart-btn"><img src="resources/heart.svg"
+                                                        alt=""></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- product card start -->
+
+                            <!-- product card start -->
+                            <div class="col-xl-2 col-lg-4 col-sm-6 col-12 mb-md-3 mb-2" style="max-height: 260px;">
+                                <div class="card rounded-1 border border-1 product-card shadow-sm "
+                                    style=" overflow: hidden; height: 100%;">
+                                    <div class="card-img-top d-flex justify-content-center"
+                                        style="width: 100%; height: 150px; ">
+                                        <div class="p-img"
+                                            style="width: 100%; height: 100%; background: url(Product-imgs/normal-arduino-mega.jpg) no-repeat center; background-size: contain;">
+                                        </div>
+                                    </div>
+                                    <div class="card-body d-flex flex-column justify-content-between"
+                                        style="padding-bottom: 2px; padding-top: 10px; height: 110px;">
+                                        <h5 class="card-title p-title"
+                                            style="padding-bottom: 0px; margin-bottom: 4px; font-size: 12px;"> Arduino
+                                            MEGA Normal Development Board</h5>
+                                        <p class="card-text" style="font-size: small; margin-bottom: 4px;"> Rs.4,150
+                                            <!-- <span class="discount">Rs:27,000</span></p> -->
+                                        <div class="buy-heart">
+                                            <div class="row" style="margin-bottom: 5px;">
+                                                <button class="col-10 buy-btn">Add to cart</button>
+                                                <button class="col-2 heart-btn"><img src="resources/heart.svg"
+                                                        alt=""></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- product card start -->
+
+                            <!-- product card start -->
+                            <div class="col-xl-2 col-lg-4 col-sm-6 col-12 mb-md-3 mb-2" style="max-height: 260px;">
+                                <div class="card rounded-1 border border-1 product-card shadow-sm "
+                                    style=" overflow: hidden; height: 100%;">
+                                    <div class="card-img-top d-flex justify-content-center"
+                                        style="width: 100%; height: 150px; ">
+                                        <div class="p-img"
+                                            style="width: 100%; height: 100%; background: url(Product-imgs/2-Wheel_Round.jpg) no-repeat center; background-size: contain;">
+                                        </div>
+                                    </div>
+                                    <div class="card-body d-flex flex-column justify-content-between"
+                                        style="padding-bottom: 2px; padding-top: 10px; height: 110px;">
+                                        <h5 class="card-title p-title"
+                                            style="padding-bottom: 0px; margin-bottom: 4px; font-size: 12px;"> 2-Wheel
+                                            Round Double Deck Smart Car Chassis Kit </h5>
+                                        <p class="card-text" style="font-size: small; margin-bottom: 4px;"> Rs.1,200.00
+                                            <!-- <span class="discount">Rs:27,000</span></p> -->
+                                        <div class="buy-heart">
+                                            <div class="row" style="margin-bottom: 5px;">
+                                                <button class="col-10 buy-btn">Add to cart</button>
+                                                <button class="col-2 heart-btn"><img src="resources/heart.svg"
+                                                        alt=""></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- product card start -->
+
+                            <!-- product card start -->
+                            <div class="col-xl-2 col-lg-4 col-sm-6 col-12 mb-md-3 mb-2" style="max-height: 260px;">
+                                <div class="card rounded-1 border border-1 product-card shadow-sm "
+                                    style=" overflow: hidden; height: 100%;">
+                                    <div class="card-img-top d-flex justify-content-center"
+                                        style="width: 100%; height: 150px; ">
+                                        <div class="p-img"
+                                            style="width: 100%; height: 100%; background: url(Product-imgs/mortor.png) no-repeat center; background-size: contain;">
+                                        </div>
+                                    </div>
+                                    <div class="card-body d-flex flex-column justify-content-between"
+                                        style="padding-bottom: 2px; padding-top: 10px; height: 110px;">
+                                        <h5 class="card-title p-title"
+                                            style="padding-bottom: 0px; margin-bottom: 4px; font-size: 12px;"> Motor
+                                            with Copper Gear and Velocity Encoder 12-24VDC</h5>
+                                        <p class="card-text" style="font-size: small; margin-bottom: 4px;"> Rs.1,100
+                                            <!-- <span class="discount">Rs:27,000</span></p> -->
+                                        <div class="buy-heart">
+                                            <div class="row" style="margin-bottom: 5px;">
+                                                <button class="col-10 buy-btn">Add to cart</button>
+                                                <button class="col-2 heart-btn"><img src="resources/heart.svg"
+                                                        alt=""></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- product card start -->
+
+                            <!-- product card start -->
+                            <div class="col-xl-2 col-lg-4 col-sm-6 col-12 mb-md-3 mb-2" style="max-height: 260px;">
+                                <div class="card rounded-1 border border-1 product-card shadow-sm "
+                                    style=" overflow: hidden; height: 100%;">
+                                    <div class="card-img-top d-flex justify-content-center"
+                                        style="width: 100%; height: 150px; ">
+                                        <div class="p-img"
+                                            style="width: 100%; height: 100%; background: url(Product-imgs/n20-motorpng.png) no-repeat center; background-size: contain;">
+                                        </div>
+                                    </div>
+                                    <div class="card-body d-flex flex-column justify-content-between"
+                                        style="padding-bottom: 2px; padding-top: 10px; height: 110px;">
+                                        <h5 class="card-title p-title"
+                                            style="padding-bottom: 0px; margin-bottom: 4px; font-size: 12px;">Gear Motor
+                                            6V 200RPM N20 </h5>
+                                        <p class="card-text" style="font-size: small; margin-bottom: 4px;"> Rs.800
+                                            <!-- <span class="discount">Rs:27,000</span></p> -->
+                                        <div class="buy-heart">
+                                            <div class="row" style="margin-bottom: 5px;">
+                                                <button class="col-10 buy-btn">Add to cart</button>
+                                                <button class="col-2 heart-btn"><img src="resources/heart.svg"
+                                                        alt=""></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- product card start -->
+
+                            <!-- product card start -->
+                            <div class="col-xl-2 col-lg-4 col-sm-6 col-12 mb-md-3 mb-2" style="max-height: 260px;">
+                                <div class="card rounded-1 border border-1 product-card shadow-sm "
+                                    style=" overflow: hidden; height: 100%;">
+                                    <div class="card-img-top d-flex justify-content-center"
+                                        style="width: 100%; height: 150px; ">
+                                        <div class="p-img"
+                                            style="width: 100%; height: 100%; background: url(Product-imgs/hc-05.jpg) no-repeat center; background-size: contain;">
+                                        </div>
+                                    </div>
+                                    <div class="card-body d-flex flex-column justify-content-between"
+                                        style="padding-bottom: 2px; padding-top: 10px; height: 110px;">
+                                        <h5 class="card-title p-title"
+                                            style="padding-bottom: 0px; margin-bottom: 4px; font-size: 12px;">HC-05
+                                            Bluetooth Wireless Serial Arduino Module </h5>
+                                        <p class="card-text" style="font-size: small; margin-bottom: 4px;"> Rs.900
+                                            <!-- <span class="discount">Rs:27,000</span></p> -->
+                                        <div class="buy-heart">
+                                            <div class="row" style="margin-bottom: 5px;">
+                                                <button class="col-10 buy-btn">Add to cart</button>
+                                                <button class="col-2 heart-btn"><img src="resources/heart.svg"
+                                                        alt=""></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- product card start -->
+
+                            <!-- product card start -->
+                            <div class="col-xl-2 col-lg-4 col-sm-6 col-12 mb-md-3 mb-2" style="max-height: 260px;">
+                                <div class="card rounded-1 border border-1 product-card shadow-sm "
+                                    style=" overflow: hidden; height: 100%;">
+                                    <div class="card-img-top d-flex justify-content-center"
+                                        style="width: 100%; height: 150px; ">
+                                        <div class="p-img"
+                                            style="width: 100%; height: 100%; background: url(Product-imgs/hc-05.jpg) no-repeat center; background-size: contain;">
+                                        </div>
+                                    </div>
+                                    <div class="card-body d-flex flex-column justify-content-between"
+                                        style="padding-bottom: 2px; padding-top: 10px; height: 110px;">
+                                        <h5 class="card-title p-title"
+                                            style="padding-bottom: 0px; margin-bottom: 4px; font-size: 12px;">HC-06
+                                            Bluetooth Wireless Serial Arduino Module </h5>
+                                        <p class="card-text" style="font-size: small; margin-bottom: 4px;"> Rs.950
+                                            <!-- <span class="discount">Rs:27,000</span></p> -->
+                                        <div class="buy-heart">
+                                            <div class="row" style="margin-bottom: 5px;">
+                                                <button class="col-10 buy-btn">Add to cart</button>
+                                                <button class="col-2 heart-btn"><img src="resources/heart.svg"
+                                                        alt=""></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- product card start -->
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <!-- Hot deals end -->
+
+    </div>
+
+    <div class="container-fluid page-footer">
+        <div class="row background-color bottom-0 fs-6">
+            <div class="footer-text col-12 text-center mb-md-3 mt-1 mt-md-3 mb-1 poppins-light w-100"
+                style=" color: rgb(255, 255, 255);">
+                This web application is designed and developed by <span class="poppins-medium">Sachala Indudunu.</span>
+                <br>
+                <span>&copy;Copyright |&reg; All right Reserved </span>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+
+    <script src="animation.js"></script>
+    <script src="dataHandle.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewTech - Admin Panel</title>
+    <link rel="icon" type="image/x-icon" href="resources/logo.png">
+    <link rel="stylesheet" href="admin_panel_style.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+</head>
+
+<body onload="updateProductProcess();" class="vh-100 d-flex flex-column" style="overflow: hidden; background-color: aliceblue;">
+
+    <div class="container-fluid d-flex flex-column vh-100" >
+
+        <div class="row d-flex flex-column ">
+            <div class="col-12 d-flex align-items-center justify-content-between"
+                style="height: 80px; background-color:aliceblue; width: 100vw; z-index: 2;">
+                <div class="nav-left d-flex align-items-center">
+                    <img src="resources/logo.png" class="nav-icon nav-icon-right" alt="">
+                    <img src="resources/NewTech..png" class=" d-sm-block d-none nav-icon-right" style="height: 30px;"
+                        alt="">
+                </div>
+                <div class="nav-right">
+                    <span class="fs-4 poppins-regular" style="margin-right: 30px;">Update Product</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container-fluid border"
+            style="flex: 1; padding: 20px; background-color: rgb(252, 255, 255); overflow-y: auto;">
+
+            <div class="row">
+                <div class="col-12 mt-3">
+                    <span class="section-title poppins-medium">Product Details</span>
+                    <hr class="section-seperator">
+                </div>
+                <div class="col-12">
+                    <div class="row d-flex flex-column align-items-center">
+
+                        <div class="col-12 col-lg-8 col-md-10 col-xl-6">
+                            <label class="form-label poppins-medium" for="ProductName">Product Name</label>
+                            <input class="form-control rounded-0" type="text" id="ProductName">
+                        </div>
+
+                        <div class="col-12 col-lg-8 col-md-10 col-xl-6 mt-4">
+                            <label class="form-label poppins-medium" for="ProductPrice">Product Price</label>
+                            <div class="input-group">
+                                <span class="input-group-text rounded-0">Rs</span>
+                                <input type="text" class="form-control rounded-0" id="ProductPrice"
+                                    aria-label="Amount (to the nearest dollar)">
+                                <span class="input-group-text rounded-0">.00</span>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-8 col-md-10 col-xl-6 mt-4 ">
+                            <label for="mainCat" class="form-label poppins-medium">Select Main Category</label>
+                            <select class="form-select rounded-0" id="mainCat" aria-label="Default select example">
+                                <option selected style="color: #888;"></option>
+                                <option value="1">Category 01</option>
+                                <option value="2">Category 02</option>
+                                <option value="3">Category 03</option>
+                            </select>
+                        </div>
+
+                        <div class="col-12 col-lg-8 col-md-10 col-xl-6 mt-4 ">
+                            <label for="subCat" class="form-label poppins-medium">Select Sub Category</label>
+                            <select class="form-select rounded-0" id="subCat" aria-label="Default select example">
+                                <option selected style="color: #888;"></option>
+                                <option value="1">Sub Category 01</option>
+                                <option value="2">Sub Category 02</option>
+                                <option value="3">Sub Category 03</option>
+                            </select>
+                        </div>
+
+                        <div class="col-12 col-lg-8 col-md-10 col-xl-6 mt-4 ">
+                            <label class="form-label poppins-medium" for="floatingTextarea2">Product
+                                Description</label>
+                            <textarea class="form-control rounded-0" placeholder="Type Product Description here"
+                                id="floatingTextarea2" style="height: 300px"></textarea>
+                        </div>
+
+                        <div class="col-12 col-lg-8 col-md-10 col-xl-6 mt-4 ">
+                            <label class="form-label poppins-medium" for="floatingTextarea2">What's include in the
+                                package</label>
+                            <textarea class="form-control rounded-0"
+                                placeholder="Type what items you are going to deliver with the package"
+                                id="floatingTextarea2" style="height: 100px"></textarea>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 mt-4">
+                    <span class="section-title poppins-medium">Product Images</span>
+                    <hr class="section-seperator">
+                </div>
+
+                <div class="col-12">
+                    <div class="row" style="overflow: hidden;">
+                        <div class="col-12 col-lg-8 col-md-10 col-xl-6 offset-xl-3 offset-lg-2 offset-md-1 offset-0">
+                            <span class="poppins-medium">Upload Product Photos <span
+                                    style="color: #888; font-size: small;" class="poppins-light">(You must upload
+                                    atleast one image)</span></span>
+                            <div class="d-flex justify-content-between mt-2 pUpLoadedImg_wrap">
+                                <div class="pUpLoadedImg m-1"> </div>
+                                <div class="pUpLoadedImg m-1"> </div>
+                                <div class="pUpLoadedImg m-1"> </div>
+                                <div class="pUpLoadedImg m-1"> </div>
+                                <div class="pUpLoadedImg m-1"> </div>
+                            </div>
+                            <div class="uplod-field mt-4">
+                                <div class="input-group mb-3">
+                                    <input type="file" class="form-control rounded-0" id="inputGroupFile02">
+                                    <label class="input-group-text rounded-0"
+                                        style="background-color: #2e2e2e; color: #FDD700;"
+                                        for="inputGroupFile02">Upload</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-12 mt-4">
+                    <span class="section-title poppins-medium">Delivery Details</span>
+                    <hr class="section-seperator">
+                </div>
+                <div class="row">
+                    <div class="col-xl-3 col-md-4 offset-xl-3 offset-md-2">
+                        <label class="form-label poppins-medium" for="ProductPrice">Delivery Cost <span
+                                class="poppins-light" style="font-size: small; color: #888;">(Around
+                                Colombo)</span></label>
+                        <div class="input-group">
+                            <span class="input-group-text rounded-0">Rs</span>
+                            <input type="text" class="form-control rounded-0" id="ProductPrice"
+                                aria-label="Amount (to the nearest dollar)">
+                            <span class="input-group-text rounded-0">.00</span>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-md-4">
+                        <label class="form-label poppins-medium" for="ProductPrice">Delivery Time <span
+                                class="poppins-light" style="font-size: small; color: #888;">(Around
+                                Colombo)</span></label>
+                        <div class="input-group">
+                            <span class="input-group-text rounded-0">Days</span>
+                            <input type="text" class="form-control rounded-0" id="ProductPrice"
+                                aria-label="Amount (to the nearest dollar)">
+                        </div>
+                    </div>
+
+                    <hr class="col-12 col-lg-8 col-md-10 col-xl-6 offset-xl-3 offset-lg-2 offset-md-1 offset-0 mt-4"
+                        style="color: #888;">
+
+                    <div class="col-xl-3 col-md-4 offset-xl-3 offset-md-2">
+                        <label class="form-label poppins-medium" for="ProductPrice">Delivery Cost <span
+                                class="poppins-light" style="font-size: small; color: #888;">(Island
+                                Wide)</span></label>
+                        <div class="input-group">
+                            <span class="input-group-text rounded-0">Rs</span>
+                            <input type="text" class="form-control rounded-0" id="ProductPrice"
+                                aria-label="Amount (to the nearest dollar)">
+                            <span class="input-group-text rounded-0">.00</span>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-md-4">
+                        <label class="form-label poppins-medium" for="ProductPrice">Delivery Time <span
+                                class="poppins-light" style="font-size: small; color: #888;">(Island
+                                Wide)</span></label>
+                        <div class="input-group">
+                            <span class="input-group-text rounded-0">Days</span>
+                            <input type="text" class="form-control rounded-0" id="ProductPrice"
+                                aria-label="Amount (to the nearest dollar)">
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+            <div class="row">
+                <button id="newProductBtn" onclick="addProduct();"
+                    class="col-lg-4 col-sm-8 offset-lg-4 offset-sm-2 addP-btn poppins-regular">Update Product</button>
+            </div>
+
+        </div>
+
+        <!-- admin panel content start -->
+
+        <!-- admin panel content start -->
+
+
+        <script src="animation.js"></script>
+        <script src="dataHandle.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewTech - Watchlist</title>
+    <link rel="icon" type="image/x-icon" href="resources/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="admin_panel_style.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+
+</head>
+
+<body style="height: 100vh;">
+
+    <div class="container-fluid">
+        <div class="row ">
+            <!-- -----------------------nav bar start ------------------------------ -->
+            <div class="col-12" style="height: 80px; z-index: 3; background-color: #202020; position: fixed;">
+
+                <!-- burger menu start -->
+                <div class="row d-lg-none d-block">
+                    <div class="col-12 col-sm-7 col-md-6 burger-nav d-flex align-items-center" id="burger-menu-wrap"
+                        style="background-color: #202020;">
+                        <div class="row ">
+
+                            <div class="col-12 burger-nav-link">
+                                <img class="profile-pic" src="resources/admin_dashboard/MaleUserYellow.png" alt="">
+                                <span class="link-text poppins-light"
+                                    style="margin-left: 10px; font-size: 30px;">Sachala</span>
+                            </div>
+                            <hr style="width: 2px; color: #FDD700; width: 100%;">
+                            <div class="col-12 burger-nav-link text-center">
+                                <a href="#" class="link-text poppins-medium">Categories</a>
+                            </div>
+                            <hr style="width: 2px; color: #FDD700; width: 100%">
+                            <div class="col-12 burger-nav-link text-center">
+                                <a href="#" class="link-text poppins-medium">About</a>
+                            </div>
+                            <hr style="width: 2px; color: #FDD700; width: 100%">
+                            <div class="col-12 burger-nav-link text-center">
+                                <a href="#" class="link-text poppins-medium">Contact</a>
+                            </div>
+                            <hr style="width: 2px; color: #FDD700; width: 100%">
+                            <div class="col-12 burger-nav-link text-center">
+                                <a href="#" class="link-text poppins-medium">Shop Location</a>
+                            </div>
+                            <hr style="width: 2px; color: #FDD700; width: 100%">
+
+                        </div>
+                    </div>
+                </div>
+                <!-- burger menu end -->
+
+                <div class=" nav-bar d-flex align-items-center"
+                    style="height: 80px; z-index: 4; background-color: #202020;" id="">
+
+                    <div class="col-10 offset-1 d-flex align-items-center justify-content-between"
+                        style="margin-top: 11px;">
+
+                        <div class=" d-flex align-items-center" style="width: fit-content;">
+                            <div style="cursor: pointer; margin-right: 10px;"
+                                class="burger nav-icon-right d-lg-none d-block" onclick="showHomeMenu();">
+                                <div class="burger-1" id="burger-1" style="background-color: white;"></div>
+                                <div class="burger-2" id="burger-2" style="background-color: white;"></div>
+                                <div class="burger-3" id="burger-3" style="background-color: white;"></div>
+                            </div>
+                            <img src="resources/logo.png" class="d-lg-none d-block" style="height: 40px;" alt="">
+                            <img src="resources/NewTech.white.png" class="d-lg-block d-none" style="height: 30px;"
+                                alt="">
+                        </div>
+
+                        <div class="d-flex align-items-center" style="font-size: small;">
+                            <span class="nav-elements poppins-medium nav-element  d-lg-block d-none">Categories</span>
+                            <span class="nav-elements poppins-medium nav-element  d-lg-block d-none">About</span>
+                            <span class="nav-elements poppins-medium nav-element  d-lg-block d-none">Contact &
+                                Location</span>
+                            <div
+                                class="div nav-elements poppins-medium d-flex align-items-center nav-element d-lg-block d-none">
+                                <img src="resources/admin_dashboard/MaleUserYellow.png" class="profile-pic" alt="">
+                            </div>
+                            <img class="nav-element" src="resources/search.png" style="height: 22px;" alt="">
+                            <a href="cart.html"><img class="nav-element" src="resources/cart.png" style="height: 22px;"
+                                    alt=""></a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- -----------------------nav bar end ------------------------------ -->
+        </div>
+    </div>
+
+    <div class="container" style="height: fit-content; margin-top: 80px;">
+        <div class="row">
+
+            <div class="col-12 d-flex justify-content-between align-items-center" style="height: 60px; width: 100%;">
+                <span class="fs-4 poppins-medium">My Wishlist</span>
+                <a href="home.html">
+                    <div class="border rounded-1 shadow-sm undo-btn"
+                        style="background: url(resources/Undo.png) no-repeat center; background-size: cover; width: 30px; height: 30px;">
+                    </div>
+                </a>
+            </div>
+
+        </div>
+        <hr>
+    </div>
+
+    <div class="container mt-lg-5 mt-0" style="height: fit-content; margin-bottom: 50px">
+        <div class="row p-3 d-flex flex-lg-row flex-column-reverse">
+
+            <div class="col-12" style="height: fit-content;">
+                <div class="row px-0 px-lg-2">
+
+                    <!-- single product card start -->
+                    <div class="col-12 shadow-sm mb-2 border rounded-1  d-flex justify-content-between align-items-center"
+                        style="font-size: 12px;">
+                        <div class="p-admin-img"
+                            style="height: 80px; width: 100px; background: url(Product-imgs/arm.jpg) no-repeat center; background-size: cover;">
+                        </div>
+                        <div class="edit-icons d-flex justify-content-start" style="width: 40%;">
+                            <span class="poppins-regular">Optimus 4 DOF Robot Arm</span>
+                        </div>
+                        <div class="edit-icons d-flex justify-content-start" style="width: 30%;">
+                            <span class="poppins-regular">Rs: 5,400</span>
+                        </div>
+                        <div class="edit-icons d-flex flex-sm-row flex-column justify-content-between"
+                            style="width: fit-content;">
+                            <a href="robotArm_singleView.html"><img class="watchlist-PIcon" src="resources/Eye.png"
+                                    style="height: 20px;" alt=""></a>
+                            <img src="resources/addToCart.png" class="ms-0 ms-sm-3 mt-sm-0 mt-1 watchlist-PIcon"
+                                style="height: 23px;" alt="">
+                            <img src="resources/Remove.png" class="ms-0 ms-sm-3 mt-sm-0 mt-1 watchlist-PIcon"
+                                style="height: 20px;" alt="">
+
+                        </div>
+                    </div>
+                    <!-- single product card start -->
+
+                    <!-- single product card start -->
+                    <div class="col-12 shadow-sm mb-2 border rounded-1  d-flex justify-content-between align-items-center"
+                        style="font-size: 12px;">
+                        <div class="p-admin-img"
+                            style="height: 80px; width: 100px; background: url(Product-imgs/images.jpeg) no-repeat center; background-size: cover;">
+                        </div>
+                        <div class="edit-icons d-flex justify-content-start" style="width: 40%;">
+                            <span class="poppins-regular">Raspberry Pi 4 Model B 2GB Original UK</span>
+                        </div>
+                        <div class="edit-icons d-flex justify-content-start" style="width: 30%;">
+                            <span class="poppins-regular">Rs.25,750</span>
+                        </div>
+                        <div class="edit-icons d-flex flex-sm-row flex-column justify-content-between"
+                            style="width:fit-content;">
+                            <a href="robotArm_singleView.html"><img class="watchlist-PIcon" src="resources/Eye.png"
+                                    style="height: 20px;" alt=""></a>
+                            <img src="resources/addToCart.png" class="ms-0 ms-sm-3 mt-sm-0 mt-1 watchlist-PIcon"
+                                style="height: 23px;" alt="">
+                            <img src="resources/Remove.png" class="ms-0 ms-sm-3 mt-sm-0 mt-1 watchlist-PIcon"
+                                style="height: 20px;" alt="">
+                        </div>
+                    </div>
+                    <!-- single product card start -->
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    </div>
+
+
+
+
+    <div class="container-fluid page-footer mt-5 position-absolute bottom-0">
+        <div class="row background-color bottom-0 fs-6">
+            <div class="footer-text col-12 text-center mb-md-3 mt-1 mt-md-3 mb-1 poppins-light w-100"
+                style=" color: rgb(255, 255, 255);">
+                This web application is designed and developed by <span class="poppins-medium">Sachala Indudunu.</span>
+                <br>
+                <span>&copy;Copyright |&reg; All right Reserved </span>
+            </div>
+        </div>
+    </div>
+
+    <script src="animation.js"></script>
+    <script src="dataHandle.js"></script>
+
+</body>
+
+</html>

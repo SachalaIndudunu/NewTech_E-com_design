@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewTech - Admin Panel</title>
+    <link rel="icon" type="image/x-icon" href="resources/logo.png">
+    <link rel="stylesheet" href="admin_panel_style.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+</head>
+
+<body class="vh-100 d-flex flex-column" style="overflow: hidden;">
+
+    <div class="container-fluid">
+
+        <div class="row d-flex flex-column ">
+            <div class="col-12 d-flex align-items-center justify-content-between"
+                style="height: 80px; background-color:aliceblue; width: 100vw; z-index: 2;">
+                <div class="nav-left d-flex align-items-center">
+                    <div style="cursor: pointer;" class="burger nav-icon-right" onclick="showMenu();">
+                        <div class="burger-1" style="background-color: #202020;" id="burger-1"></div>
+                        <div class="burger-2" style="background-color: #202020;" id="burger-2"></div>
+                        <div class="burger-3" style="background-color: #202020;" id="burger-3"></div>
+                    </div>
+                    <img src="resources/logo.png" class="nav-icon nav-icon-right" alt="">
+                    <img src="resources/NewTech..png" class=" d-sm-block d-none nav-icon-right" style="height: 30px;"
+                        alt="">
+                </div>
+                <div class="nav-right">
+                    <span class="fs-4 poppins-regular" style="margin-right: 30px;">Manage Products</span>
+                </div>
+            </div>
+
+            <!-- burger menu start -->
+            <div class=" bottom-0 col-12 col-sm-7 col-md-6 col-lg-5 col-xl-4 col-xxl-3 d-flex flex-column align-items-center justify-content-between"
+                id="burger-menu-wrap" style="flex: 1; background-color: #202020;">
+
+                <!--profile bar start -->
+                <div class="col-10 d-flex justify-content-between align-items-center"
+                    style="height: 70px; margin-top: 85px;">
+                    <div class="d-flex align-items-center">
+                        <img src="resources/admin_dashboard/Male User.png" alt="" class="nav-icon">
+                        <span style="color: white;" class="poppins-medium fs-5 ms-2">Sachala</span>
+                    </div>
+
+                    <div class="nav-icon d-flex justify-content-end align-items-center">
+                        <a href=""><img src="resources/admin_dashboard/Pencil.png" class="" style="height: 20px;"
+                                alt=""></a>
+                    </div>
+                </div>
+                <!--profile bar end -->
+
+                <div class="row">
+
+                    <!-- burger button start -->
+                    <div class="col-10 offset-1 mt-3">
+                        <button class="burger-btn d-flex justify-content-between align-items-center"
+                            style="background-color: #202020;" id="dashboard-btn" onclick="adminPanelNavigation(id);">
+                            <img class="burger-btn-img" src="resources/admin_dashboard/Analytics_yellow.png" alt="">
+                            <span class="burger-btn-text poppins-light">Dashboard</span>
+                            <div class="fake-img"></div>
+                        </button>
+                    </div>
+                    <!-- burger button start -->
+
+                    <!-- burger button start -->
+                    <div class="col-10 offset-1 mt-3">
+                        <button class="burger-btn d-flex justify-content-between align-items-center"
+                            style="background-color: #202020;" id="manageUser-btn" onclick="adminPanelNavigation(id);">
+                            <img class="burger-btn-img" src="resources/admin_dashboard/Male_yellow.png" alt="">
+                            <span class="burger-btn-text poppins-light">Manage User</span>
+                            <div class="fake-img"></div>
+                        </button>
+                    </div>
+                    <!-- burger button end -->
+
+                    <!-- burger button start -->
+                    <!-- <div class="col-10 offset-1 mt-3">
+                        <button class="burger-btn d-flex justify-content-between align-items-center"
+                            style="background-color: #202020;" id="manageProduct-btn">
+                            <img class="burger-btn-img" src="resources/admin_dashboard/Box_yellow.png" alt="">
+                            <span class="burger-btn-text poppins-light">Manage Products</span>
+                            <div class="fake-img"></div>
+                        </button>
+                    </div> -->
+                    <!-- burger button end -->
+
+                    <!--active burger button start -->
+                    <div class="col-10 offset-1 mt-3">
+                        <button class="burger-btn d-flex justify-content-between align-items-center"
+                            style="background-color: #FDD700;" id="manageProduct-btn"
+                            onclick="adminPanelNavigation(id);">
+                            <img class="burger-btn-img" src="resources/admin_dashboard/Box_black.png" alt="">
+                            <span class="burger-btn-text  poppins-regular" style="color: #202020;">Manage
+                                Products</span>
+                            <div class="fake-img"></div>
+                        </button>
+                    </div>
+                    <!--active burger button end -->
+
+                    <!-- burger button start -->
+                    <div class="col-10 offset-1 mt-3 mb-3">
+                        <button class="burger-btn d-flex justify-content-between align-items-center"
+                            style="background-color: #202020;" id="onlineChat-btn" onclick="adminPanelNavigation(id);">
+                            <img class="burger-btn-img" src="resources/admin_dashboard/chat_yellow.png" alt="">
+                            <span class="burger-btn-text poppins-light">Onlince Chat</span>
+                            <div class="fake-img"></div>
+                        </button>
+                    </div>
+                    <!-- burger button end -->
+
+                </div>
+
+
+                <!--Log out start -->
+                <div class="col-10 d-flex justify-content-center align-items-center"
+                    style="height: 70px; margin-top: 85px;">
+                    <a href="admin_logIn.html" style="text-decoration: none;">
+                        <div class="d-flex align-items-center">
+                            <img src="resources/admin_dashboard/Logout Rounded Left.png" alt="" class="nav-icon">
+                            <span style="color: white;" class="poppins-medium fs-5 ms-2">Log Out</span>
+                        </div>
+                    </a>
+                </div>
+                <!--log out end -->
+
+            </div>
+            <!-- burger menu start -->
+
+        </div>
+
+    </div>
+
+    <!-- admin panel content start -->
+    <div class="container-fluid"
+        style="width: 100%; flex: 1; padding: 20px; background-color: rgb(255, 255, 255); overflow: auto;">
+
+        <!-- first bar start (title/search bar/add new button) -->
+        <div class="container" style="height: fit-content;">
+            <div class="row">
+
+                <div class="col-12 d-flex justify-content-md-between mt-4 mt-md-0 align-items-md-center  flex-md-row flex-column-reverse align-items-start"
+                    style="height: 60px; width: 100%;">
+                    <!-- <span class="fs-4 poppins-medium">Products</span> -->
+                    <div class="search_feild d-flex align-items-center justify-content-start">
+                        <input type="text" class="product_search mt-2 mt-md-0 " placeholder="Search Product Here">
+                        <!-- <img class="addP_img" src="resources/search_yellow.png" alt=""
+                            style="position: absolute; width: 25px; z-index: 0; transform: translateX(-10px);"> -->
+                    </div>
+                    <a target="_blank" href="admin_add_product.html">
+                        <button class="add-item-btn yellow">
+                            Add a New Item <img class="plus-img" src="resources/PlusMath_yellow.png" alt="">
+                        </button>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <!-- first bar end (title/search bar/add new button) -->
+
+        <div class="container mt-3">
+            <div class="row">
+
+                <!-- product card start -->
+                <div class="col-xl-2 col-lg-4 col-sm-6 col-12 mb-md-3 mb-2 " style="max-height: 260px;">
+                    <div id="1" class="card rounded-1 shadow-sm border" 
+                        style=" overflow: hidden; height: 100%;">
+                        <div class="card-img-top d-flex justify-content-center" style="width: 100%; height: 150px; ">
+                            <div class="p-img"
+                                style="width: 100%; height: 100%; background: url(Product-imgs/microbit.jpg) no-repeat center; background-size: contain;">
+                            </div>
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-between"
+                            style="padding-bottom: 2px; padding-top: 10px; height: 110px;">
+                            <h5 class="card-title p-title "
+                                style="padding-bottom: 0px; margin-bottom: 4px; font-size: 12px;">micro:bit
+                                Development Board V1</h5>
+                            <p class="card-text" style="font-size: small; margin-bottom: 4px;"> Rs. 6,250
+                                <span class="discount">Rs.6,700</span>
+                            </p>
+                            <div class="mb-2 custom-icons-wrap d-flex justify-content-between align-items-center">
+                                <span class="poppins-medium" style="color: green; font-size: small;">12 Units</span>
+                                <div>
+                                    <a href="admin_Update_product.html" target="_blank"><img class="custom-icon" src="resources/Edit.png" alt=""></a>
+                                    <img class="custom-icon" src="resources/Remove.png " alt="">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- product card start -->
+
+                <!-- product card start -->
+                <div class="col-xl-2 col-lg-4 col-sm-6 col-12 mb-md-3 mb-2" style="max-height: 260px;">
+                    <div class="card rounded-1 shadow-sm border " style=" overflow: hidden; height: 100%;">
+                        <div class="card-img-top d-flex justify-content-center" style="width: 100%; height: 150px; ">
+                            <div class="p-img"
+                                style="width: 100%; height: 100%; background: url(Product-imgs/4wheel-kit.png) no-repeat center; background-size: contain;">
+                            </div>
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-between"
+                            style="padding-bottom: 2px; padding-top: 10px; height: 110px;">
+                            <h5 class="card-title p-title"
+                                style="padding-bottom: 0px; margin-bottom: 4px; font-size: 12px;"> 4 Wheel
+                                Smart Car Chassis kit </h5>
+                            <p class="card-text" style="font-size: small; margin-bottom: 4px;"> Rs.2,050
+                                <!-- <span class="discount">Rs:27,000</span></p> -->
+                            <div class="mb-2 custom-icons-wrap d-flex justify-content-between align-items-center">
+                                <span class="poppins-medium" style="color: green; font-size: small;">7 Units</span>
+                                <div>
+                                    <img class="custom-icon" src="resources/Edit.png" alt="">
+                                    <img class="custom-icon" src="resources/Remove.png " alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- product card start -->
+
+                <!-- product card start -->
+                <div class="col-xl-2 col-lg-4 col-sm-6 col-12 mb-md-3 mb-2" style="max-height: 260px;">
+                    <div id="2" class="card rounded-1 shadow-sm border " 
+                        style=" overflow: hidden; height: 100%;">
+                        <div class="card-img-top d-flex justify-content-center" style="width: 100%; height: 150px; ">
+                            <div class="p-img"
+                                style="width: 100%; height: 100%; background: url(Product-imgs/images.jpeg) no-repeat center; background-size: contain;">
+                            </div>
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-between"
+                            style="padding-bottom: 2px; padding-top: 10px; height: 110px;">
+                            <h5 class="card-title p-title"
+                                style="padding-bottom: 0px; margin-bottom: 4px; font-size: 12px;">Raspberry
+                                Pi 4 Model B 4GB Original UK </h5>
+                            <p class="card-text" style="font-size: small; margin-bottom: 4px;"> Rs.27,500
+                                <span class="discount">Rs.28,000</span>
+                            </p>
+                            <div class="mb-2 custom-icons-wrap d-flex justify-content-between align-items-center">
+                                <span class="poppins-medium" style="color: green; font-size: small;">3 Units </span>
+                                <div>
+                                    <img class="custom-icon" src="resources/Edit.png" alt="">
+                                    <img class="custom-icon" src="resources/Remove.png " alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- product card start -->
+
+                <!-- product card start -->
+                <div class="col-xl-2 col-lg-4 col-sm-6 col-12 mb-md-3 mb-2" style="max-height: 260px;">
+                    <div class="card rounded-1 shadow-sm border " style=" overflow: hidden; height: 100%;">
+                        <div class="card-img-top d-flex justify-content-center" style="width: 100%; height: 150px; ">
+                            <div class="p-img"
+                                style="width: 100%; height: 100%; background: url(Product-imgs/NanoV3.jpg) no-repeat center; background-size: contain;">
+                            </div>
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-between"
+                            style="padding-bottom: 2px; padding-top: 10px; height: 110px;">
+                            <h5 class="card-title p-title"
+                                style="padding-bottom: 0px; margin-bottom: 4px; font-size: 12px;">Arduino
+                                Nano V3.0 Original</h5>
+                            <p class="card-text" style="font-size: small; margin-bottom: 4px;"> Rs.1,950.00
+                                <span class="discount">Rs:2,100</span>
+                            </p>
+                            <div class="mb-2 custom-icons-wrap d-flex justify-content-between align-items-center">
+                                <span class="poppins-medium" style="color: green; font-size: small;">1 Units </span>
+                                <div>
+                                    <img class="custom-icon" src="resources/Edit.png" alt="">
+                                    <img class="custom-icon" src="resources/Remove.png " alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- product card start -->
+
+                <!-- product card start -->
+                <div class="col-xl-2 col-lg-4 col-sm-6 col-12 mb-md-3 mb-2" style="max-height: 260px;">
+                    <div class="card rounded-1 shadow-sm border " style=" overflow: hidden; height: 100%;">
+                        <div class="card-img-top d-flex justify-content-center" style="width: 100%; height: 150px; ">
+                            <div class="p-img"
+                                style="width: 100%; height: 100%; background: url(Product-imgs/ESP32.jpg) no-repeat center; background-size: contain;">
+                            </div>
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-between"
+                            style="padding-bottom: 2px; padding-top: 10px; height: 110px;">
+                            <h5 class="card-title p-title "
+                                style="padding-bottom: 0px; margin-bottom: 4px; font-size: 12px;"> NodeMCU
+                                ESP32S WiFi Bluetooth Dual Mode Board</h5>
+                            <p class="card-text" style="font-size: small; margin-bottom: 4px;"> Rs.1,430
+                                <!-- <span class="discount">Rs:27,000</span></p> -->
+                            <div class="mb-2 custom-icons-wrap d-flex justify-content-between align-items-center">
+                                <span class="poppins-medium" style="color: green; font-size: small;">4 Units</span>
+                                <div>
+                                    <img class="custom-icon" src="resources/Edit.png" alt="">
+                                    <img class="custom-icon" src="resources/Remove.png " alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- product card start -->
+
+                <!-- product card start -->
+                <div class="col-xl-2 col-lg-4 col-sm-6 col-12 mb-md-3 mb-2" style="max-height: 260px;">
+                    <div class="card rounded-1 shadow-sm border " style=" overflow: hidden; height: 100%;">
+                        <div class="card-img-top d-flex justify-content-center" style="width: 100%; height: 150px; ">
+                            <div class="p-img"
+                                style="width: 100%; height: 100%; background: url(Product-imgs/TTGO.png) no-repeat center; background-size: contain;">
+                            </div>
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-between"
+                            style="padding-bottom: 2px; padding-top: 10px; height: 110px;">
+                            <h5 class="card-title p-title"
+                                style="padding-bottom: 0px; margin-bottom: 4px; font-size: 12px;"> TTGO
+                                T-Call ESP32 SIM800L Module v1.4 </h5>
+                            <p class="card-text" style="font-size: small; margin-bottom: 4px;"> Rs.7,900
+                                <!-- <span class="discount">Rs:27,000</span></p> -->
+                            <div class="mb-2 custom-icons-wrap d-flex justify-content-between align-items-center">
+                                <span class="poppins-medium" style="color: red; font-size: small;">0 Units </span>
+                                <div>
+                                    <img class="custom-icon" src="resources/Edit.png" alt="">
+                                    <img class="custom-icon" src="resources/Remove.png " alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- product card start -->
+
+                <!-- product card start -->
+                <div class="col-xl-2 col-lg-4 col-sm-6 col-12 mb-md-3 mb-2" style="max-height: 260px;">
+                    <div id="2" class="card rounded-1 shadow-sm border " 
+                        style=" overflow: hidden; height: 100%;">
+                        <div class="card-img-top d-flex justify-content-center" style="width: 100%; height: 150px; ">
+                            <div class="p-img"
+                                style="width: 100%; height: 100%; background: url(Product-imgs/images.jpeg) no-repeat center; background-size: contain;">
+                            </div>
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-between"
+                            style="padding-bottom: 2px; padding-top: 10px; height: 110px;">
+                            <h5 class="card-title p-title"
+                                style="padding-bottom: 0px; margin-bottom: 4px; font-size: 12px;">Raspberry
+                                Pi 4 Model B 8GB Original UK </h5>
+                            <p class="card-text" style="font-size: small; margin-bottom: 4px;"> Rs.34,500
+                                <!-- <span class="discount">Rs.28,000</span> -->
+                            </p>
+                            <div class="mb-2 custom-icons-wrap d-flex justify-content-between align-items-center">
+                                <span class="poppins-medium" style="color: red; font-size: small;">0 Units </span>
+                                <div>
+                                    <img class="custom-icon" src="resources/Edit.png" alt="">
+                                    <img class="custom-icon" src="resources/Remove.png " alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- product card start -->
+
+                <!-- product card start -->
+                <div class="col-xl-2 col-lg-4 col-sm-6 col-12 mb-md-3 mb-2" style="max-height: 260px;">
+                    <div class="card rounded-1 shadow-sm border " style=" overflow: hidden; height: 100%;">
+                        <div class="card-img-top d-flex justify-content-center" style="width: 100%; height: 150px; ">
+                            <div class="p-img"
+                                style="width: 100%; height: 100%; background: url(Product-imgs/NanoV3.jpg) no-repeat center; background-size: contain;">
+                            </div>
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-between"
+                            style="padding-bottom: 2px; padding-top: 10px; height: 110px;">
+                            <h5 class="card-title p-title"
+                                style="padding-bottom: 0px; margin-bottom: 4px; font-size: 12px;">Arduino
+                                Nano V3.0 Original</h5>
+                            <p class="card-text" style="font-size: small; margin-bottom: 4px;"> Rs.1,950.00
+                                <span class="discount">Rs:2,100</span>
+                            </p>
+                            <div class="mb-2 custom-icons-wrap d-flex justify-content-between align-items-center">
+                                <span class="poppins-medium" style="color: green; font-size: small;">3 Units </span>
+                                <div>
+                                    <img class="custom-icon" src="resources/Edit.png" alt="">
+                                    <img class="custom-icon" src="resources/Remove.png " alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- product card start -->
+
+                <!-- product card start -->
+                <div class="col-xl-2 col-lg-4 col-sm-6 col-12 mb-md-3 mb-2" style="max-height: 260px;">
+                    <div class="card rounded-1 shadow-sm border " style=" overflow: hidden; height: 100%;">
+                        <div class="card-img-top d-flex justify-content-center" style="width: 100%; height: 150px; ">
+                            <div class="p-img"
+                                style="width: 100%; height: 100%; background: url(Product-imgs/microbit.jpg) no-repeat center; background-size: contain;">
+                            </div>
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-between"
+                            style="padding-bottom: 2px; padding-top: 10px; height: 110px;">
+                            <h5 class="card-title p-title"
+                                style="padding-bottom: 0px; margin-bottom: 4px; font-size: 12px;"> micro:bit
+                                Development Board 12V-24V</h5>
+                            <p class="card-text" style="font-size: small; margin-bottom: 4px;"> Rs.7,050
+                                <!-- <span class="discount">Rs.6,700</span> -->
+                            </p>
+                            <div class="mb-2 custom-icons-wrap d-flex justify-content-between align-items-center">
+                                <span class="poppins-medium" style="color: green; font-size: small;">5 Units </span>
+                                <div>
+                                    <img class="custom-icon" src="resources/Edit.png" alt="">
+                                    <img class="custom-icon" src="resources/Remove.png " alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- product card start -->
+
+                <!-- product card start -->
+                <div class="col-xl-2 col-lg-4 col-sm-6 col-12 mb-md-3 mb-2" style="max-height: 260px;">
+                    <div class="card rounded-1 shadow-sm border " style=" overflow: hidden; height: 100%;">
+                        <div class="card-img-top d-flex justify-content-center" style="width: 100%; height: 150px; ">
+                            <div class="p-img"
+                                style="width: 100%; height: 100%; background: url(Product-imgs/sinWaveinverter.jpg) no-repeat center; background-size: contain;">
+                            </div>
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-between"
+                            style="padding-bottom: 2px; padding-top: 10px; height: 110px;">
+                            <h5 class="card-title p-title"
+                                style="padding-bottom: 0px; margin-bottom: 4px; font-size: 12px;"> EGS002
+                                EG8010 Pure Sine Wave Inverter Driver Board </h5>
+                            <p class="card-text" style="font-size: small; margin-bottom: 4px;"> Rs.1,650
+                                <span class="discount">Rs.1,700</span>
+                            </p>
+                            <div class="mb-2 custom-icons-wrap d-flex justify-content-between align-items-center">
+                                <span class="poppins-medium" style="color: green; font-size: small;">3 Units </span>
+                                <div>
+                                    <img class="custom-icon" src="resources/Edit.png" alt="">
+                                    <img class="custom-icon" src="resources/Remove.png " alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- product card start -->
+
+                <!-- product card start -->
+                <div class="col-xl-2 col-lg-4 col-sm-6 col-12 mb-md-3 mb-2" style="max-height: 260px;">
+                    <div class="card rounded-1 shadow-sm border " style=" overflow: hidden; height: 100%;">
+                        <div class="card-img-top d-flex justify-content-center" style="width: 100%; height: 150px; ">
+                            <div class="p-img"
+                                style="width: 100%; height: 100%; background: url(Product-imgs/solaInverter.jpg) no-repeat center; background-size: contain;">
+                            </div>
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-between"
+                            style="padding-bottom: 2px; padding-top: 10px; height: 110px;">
+                            <h5 class="card-title p-title"
+                                style="padding-bottom: 0px; margin-bottom: 4px; font-size: 12px;"> PWM Solar
+                                Charge Controller 40A Auto 12V-24V</h5>
+                            <p class="card-text" style="font-size: small; margin-bottom: 4px;"> Rs.4,850
+                                <span class="discount">Rs.4,920</span>
+                            </p>
+                            <div class="mb-2 custom-icons-wrap d-flex justify-content-between align-items-center">
+                                <span class="poppins-medium" style="color: red; font-size: small;">0 Units </span>
+                                <div>
+                                    <img class="custom-icon" src="resources/Edit.png" alt="">
+                                    <img class="custom-icon" src="resources/Remove.png " alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- product card start -->
+
+                <!-- product card start -->
+                <div class="col-xl-2 col-lg-4 col-sm-6 col-12 mb-md-3 mb-2" style="max-height: 260px;">
+                    <div class="card rounded-1 shadow-sm border " style=" overflow: hidden; height: 100%;">
+                        <div class="card-img-top d-flex justify-content-center" style="width: 100%; height: 150px; ">
+                            <div class="p-img"
+                                style="width: 100%; height: 100%; background: url(Product-imgs/solaInverter2.jpg) no-repeat center; background-size: contain;">
+                            </div>
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-between"
+                            style="padding-bottom: 2px; padding-top: 10px; height: 110px;">
+                            <h5 class="card-title p-title"
+                                style="padding-bottom: 0px; margin-bottom: 4px; font-size: 12px;"> PWM Solar
+                                Charge Controller 10A Auto 12V-24V </h5>
+                            <p class="card-text" style="font-size: small; margin-bottom: 4px;"> Rs.1,820
+                                <span class="discount">Rs.1,920</span>
+                            </p>
+                            <div class="mb-2 custom-icons-wrap d-flex justify-content-between align-items-center">
+                                <span class="poppins-medium" style="color: green; font-size: small;"> 2 Units</span>
+                                <div>
+                                    <img class="custom-icon" src="resources/Edit.png" alt="">
+                                    <img class="custom-icon" src="resources/Remove.png " alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- product card start -->
+
+                </div>
+            </div>
+
+        </div>
+        <!-- admin panel content start -->
+
+
+        <script src="animation.js"></script>
+        <script src="dataHandle.js"></script>
+</body>
+
+</html>

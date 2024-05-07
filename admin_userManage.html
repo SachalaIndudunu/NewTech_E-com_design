@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewTech - Admin Panel</title>
+    <link rel="icon" type="image/x-icon" href="resources/logo.png">
+    <link rel="stylesheet" href="admin_panel_style.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+</head>
+
+<body class="vh-100 d-flex flex-column" style="overflow: hidden;">
+
+    <div class="container-fluid">
+
+        <div class="row d-flex flex-column ">
+            <div class="col-12 d-flex align-items-center justify-content-between"
+                style="height: 80px; background-color:aliceblue; width: 100vw; z-index: 2;">
+                <div class="nav-left d-flex align-items-center">
+                    <div style="cursor: pointer;" class="burger nav-icon-right" onclick="showMenu();">
+                        <div class="burger-1" style="background-color: #202020;" id="burger-1"></div>
+                        <div class="burger-2" style="background-color: #202020;" id="burger-2"></div>
+                        <div class="burger-3" style="background-color: #202020;" id="burger-3"></div>
+                    </div>
+                    <img src="resources/logo.png" class="nav-icon nav-icon-right" alt="">
+                    <img src="resources/NewTech..png" class=" d-sm-block d-none nav-icon-right" style="height: 30px;"
+                        alt="">
+                </div>
+                <div class="nav-right">
+                    <span class="fs-4 poppins-regular" style="margin-right: 30px;">Manage Users</span>
+                </div>
+            </div>
+
+            <!-- burger menu start -->
+            <div class=" bottom-0 col-12 col-sm-7 col-md-6 col-lg-5 col-xl-4 col-xxl-3 d-flex flex-column align-items-center justify-content-between"
+                id="burger-menu-wrap" style="flex: 1; background-color: #202020;">
+
+                <!--profile bar start -->
+                <div class="col-10 d-flex justify-content-between align-items-center"
+                    style="height: 70px; margin-top: 85px;">
+                    <div class="d-flex align-items-center">
+                        <img src="resources/admin_dashboard/Male User.png" alt="" class="nav-icon">
+                        <span style="color: white;" class="poppins-medium fs-5 ms-2">Sachala</span>
+                    </div>
+
+                    <div class="nav-icon d-flex justify-content-end align-items-center">
+                        <a href=""><img src="resources/admin_dashboard/Pencil.png" class="" style="height: 20px;"
+                                alt=""></a>
+                    </div>
+                </div>
+                <!--profile bar end -->
+
+                <div class="row">
+
+                    <!-- burger button start -->
+                    <div class="col-10 offset-1 mt-3">
+                        <button class="burger-btn d-flex justify-content-between align-items-center"
+                            style="background-color: #202020;" id="dashboard-btn" onclick="adminPanelNavigation(id);">
+                            <img class="burger-btn-img" src="resources/admin_dashboard/Analytics_yellow.png" alt="">
+                            <span class="burger-btn-text poppins-light">Dashboard</span>
+                            <div class="fake-img"></div>
+                        </button>
+                    </div>
+                    <!-- burger button start -->
+
+                    <!--active burger button start -->
+                    <div class="col-10 offset-1 mt-3">
+                        <button class="burger-btn d-flex justify-content-between align-items-center"
+                            style="background-color: #FDD700;" id="dashboard-btn" onclick="adminPanelNavigation(id);">
+                            <img class="burger-btn-img" src="resources/admin_dashboard/Male_black.png" alt="">
+                            <span class="burger-btn-text  poppins-regular" style="color: #202020;">Manage Users</span>
+                            <div class="fake-img"></div>
+                        </button>
+                    </div>
+                    <!--active burger button end -->
+
+                    <!-- burger button start -->
+                    <!-- <div class="col-10 offset-1 mt-3">
+                        <button class="burger-btn d-flex justify-content-between align-items-center"
+                            style="background-color: #202020;" id="manageUser-btn" onclick="adminPanelNavigation(id);">
+                            <img class="burger-btn-img" src="resources/admin_dashboard/Male_yellow.png" alt="">
+                            <span class="burger-btn-text poppins-light">Manage Usera</span>
+                            <div class="fake-img"></div>
+                        </button>
+                    </div> -->
+                    <!-- burger button end -->
+
+                    <!-- burger button start -->
+                    <div class="col-10 offset-1 mt-3">
+                        <button class="burger-btn d-flex justify-content-between align-items-center"
+                            style="background-color: #202020;" id="manageProduct-btn"
+                            onclick="adminPanelNavigation(id);">
+                            <img class="burger-btn-img" src="resources/admin_dashboard/Box_yellow.png" alt="">
+                            <span class="burger-btn-text poppins-light">Manage Products</span>
+                            <div class="fake-img"></div>
+                        </button>
+                    </div>
+                    <!-- burger button end -->
+
+                    <!-- burger button start -->
+                    <div class="col-10 offset-1 mt-3 mb-3">
+                        <button class="burger-btn d-flex justify-content-between align-items-center"
+                            style="background-color: #202020;" id="onlineChat-btn" onclick="adminPanelNavigation(id);">
+                            <img class="burger-btn-img" src="resources/admin_dashboard/chat_yellow.png" alt="">
+                            <span class="burger-btn-text poppins-light">Onlince Chat</span>
+                            <div class="fake-img"></div>
+                        </button>
+                    </div>
+                    <!-- burger button end -->
+
+                </div>
+
+
+                <!--Log out start -->
+                <div class="col-10 d-flex justify-content-center align-items-center"
+                    style="height: 70px; margin-top: 85px;">
+                    <a href="admin_logIn.html" style="text-decoration: none;">
+                        <div class="d-flex align-items-center">
+                            <img src="resources/admin_dashboard/Logout Rounded Left.png" alt="" class="nav-icon">
+                            <span style="color: white;" class="poppins-medium fs-5 ms-2">Log Out</span>
+                        </div>
+                    </a>
+                </div>
+                <!--log out end -->
+
+            </div>
+            <!-- burger menu start -->
+
+        </div>
+
+    </div>
+
+    <!-- first bar start (title/search bar/add new button) -->
+    <div class="container mt-4 mt-md-0" style="height: fit-content;">
+        <div class="row">
+
+            <div class="col-12 d-flex justify-content-md-between mt-4 mt-md-0 align-items-md-center  flex-md-row flex-column-reverse align-items-start"
+                style="height: 60px; width: 100%;">
+                <!-- <span class="fs-4 poppins-medium">Products</span> -->
+                <div class="search_feild d-flex align-items-center justify-content-start">
+                    <input type="text" class="product_search mt-2 mt-md-0 " placeholder="Search User">
+                    <!-- <img class="addP_img" src="resources/search_yellow.png" alt=""
+                                style="position: absolute; width: 25px; z-index: 0; transform: translateX(-10px);"> -->
+                </div>
+                <a href="#">
+                    <button class="add-item-btn yellow">
+                        Add a New User <img class="plus-img" src="resources/admin_dashboard/userManage/Add User Male_yellow.png" alt="">
+                    </button>
+                </a>
+            </div>
+
+        </div>
+    </div>
+    <!-- first bar end (title/search bar/add new button) -->
+
+    <!-- admin panel content start -->
+    <div class="container mt-3"
+        style="width: 100%; flex: 1; padding: 20px; ">
+
+        <div class="col-12">
+            <table class="table user-table" style="border: #FDD700;">
+
+                <thead class="poppins-medium">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody class="poppins-light">
+                    <tr>
+                        <th scope="row">1</th>
+                        <td><img class="burger-btn-img" src="resources/admin_dashboard/userManage/Profile.png" alt="">
+                            Mark Otto</td>
+                        <td>Admin</td>
+                        <td>
+                            <div class="d-flex flex-column flex-md-row">
+                                <img class="custom-icon ms-1"
+                                    src="resources/admin_dashboard/userManage/Contact Details.png" alt="">
+                                <img class="custom-icon ms-1" src="resources/admin_dashboard/userManage/Money Bag.png"
+                                    alt="">
+                                <span class="d-none d-md-inline ms-1">|</span>
+                                <img class="custom-icon ms-1" src="resources/Remove.png" alt="">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td><img class="burger-btn-img" src="resources/admin_dashboard/userManage/Profile.png" alt="">
+                            Jacob Thornton</td>
+                        <td>Member</td>
+                        <td>
+                            <div class="d-flex flex-column flex-md-row">
+                                <img class="custom-icon ms-1"
+                                    src="resources/admin_dashboard/userManage/Contact Details.png" alt="">
+                                <img class="custom-icon ms-1" src="resources/admin_dashboard/userManage/Money Bag.png"
+                                    alt="">
+                                <span class="d-none d-md-inline ms-1">|</span>
+                                <img class="custom-icon ms-1" src="resources/Remove.png" alt="">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td><img class="burger-btn-img" src="resources/admin_dashboard/userManage/Profile.png" alt="">
+                            Larry the Bird</td>
+                        <td>Mgmt</td>
+                        <td>
+                            <div class="d-flex flex-column flex-md-row">
+                                <img class="custom-icon ms-1"
+                                    src="resources/admin_dashboard/userManage/Contact Details.png" alt="">
+                                <img class="custom-icon ms-1" src="resources/admin_dashboard/userManage/Money Bag.png"
+                                    alt="">
+                                <span class="d-none d-md-inline ms-1">|</span>
+                                <img class="custom-icon ms-1" src="resources/Remove.png" alt="">
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+
+    </div>
+    <!-- admin panel content start -->
+
+
+    <script src="animation.js"></script>
+    <script src="dataHandle.js"></script>
+</body>
+
+</html>

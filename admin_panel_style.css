@@ -1,0 +1,176 @@
+
+
+.nav-left {
+    width: fit-content;
+}
+
+.nav-icon {
+    height: 40px;
+    width: 40px;
+}
+
+.nav-icon-left {
+    margin-right: 30px;
+}
+
+.nav-icon-right {
+    margin-left: 30px;
+}
+
+.burger-1,
+.burger-2,
+.burger-3 {
+    height: 4px;
+    width: 30px;
+    background-color: black;
+    margin: 5px;
+    border-radius: 5px;
+    margin-left: 0px;
+    transition: margin-left 0.5s;
+}
+
+.burger-btn {
+    background-color: aliceblue;
+    height: 50px;
+    width: 100%;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.burger-btn-img {
+    height: 30px;
+}
+
+.burger-btn-text {
+    color: #FDD700;
+    transition: 0.5s;
+}
+
+.burger-btn-text:hover {
+    font-weight: 400;
+}
+
+.fake-img {
+    width: 30px;
+}
+
+#burger-menu-wrap {
+    position: absolute;
+    height: 100vh;
+    z-index: 1;
+    left: -600px;
+    transition: left 0.5s;
+
+}
+
+#burger-menu-wrap.open-menu {
+    left: 0;
+}
+
+.burger-2-opened {
+    margin-left: 5px;
+}
+
+.burger-3-opened {
+    margin-left: 10px;
+}
+
+.dashboard-img{
+    width: 400px;
+}
+
+.custom-icon {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+.custom-icon:hover{
+    opacity: 0.85;
+}
+.custom-icon:active{
+    opacity: 1;
+}
+
+.add-item-btn {
+    background-color: #2e2e2e;
+    border: 1px solid #FDD700;
+    height: 40px;
+    padding: 5px 10px 5px 10px;
+}
+
+.product_search {
+    width: 100%;
+    border-radius: 15px;
+    height: 40px;
+    border: 2px solid #FDD700;
+    padding-left: 10px;
+}
+.search_feild{
+    width: 50%;
+    /* overflow-x: auto; */
+}
+
+.pUpLoadedImg_wrap{
+    width: 100%;
+    overflow-y: auto;
+    scroll-snap-type: x mandatory;
+
+}
+.pUpLoadedImg_wrap::-webkit-scrollbar{
+    height: 2px;
+}
+.pUpLoadedImg{
+    height: 100px;
+    width: 100px;
+    min-height: 100px;
+    min-width: 100px;
+    background-color: #e4e4e4;
+    border: 1px solid #FDD700;
+    scroll-snap-align: start;
+}
+
+
+
+
+@media (max-width:450px) {
+    .nav-icon-left {
+        margin-right: 15px;
+    }
+    .dashboard-img{
+        width: 200px;
+    }
+
+    .nav-icon-right {
+        margin-left: 15px;
+    }
+
+    .nav-icon {
+        height: 30px;
+        width: 30px;
+    }
+
+    .plus-img {
+        height: 25px;
+    }
+
+    .add-item-btn {
+        font-size: small;
+    }
+    .search_feild{
+        width: 100%;
+    }
+
+}
+@media (max-width:768px) {
+
+    .search_feild{
+        width: 100%;
+    }
+    .user-table{
+        font-size: smaller;
+    }
+}
